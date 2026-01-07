@@ -1,0 +1,14 @@
+{
+  "how many orders are placed by alfreds futterkiste?": {
+    "answer": "Alfreds Futterkiste places 12 orders in total.",
+    "sql_query": "SELECT COUNT(*) FROM `order details` AS T1 JOIN orders AS T2 ON T1.OrderID = T2.OrderID JOIN customers AS T3 ON T2.CustomerID = T3.CustomerID WHERE T3.CompanyName = 'Alfreds Futterkiste'"
+  },
+  "which customer has placed most orders?": {
+    "answer": "The customer with the most orders is Save-a-lot Markets, having placed 31 orders.",
+    "sql_query": "SELECT c.CompanyName, COUNT(o.OrderID) AS OrderCount\nFROM customers c\nJOIN orders o ON c.CustomerID = o.CustomerID\nGROUP BY c.CustomerID\nORDER BY OrderCount DESC\nLIMIT 1;"
+  },
+  "which customer has placed the least orders?": {
+    "answer": "The customer with the least orders placed is Centro comercial Moctezuma, which has only made 1 order.",
+    "sql_query": "SELECT c.CompanyName, COUNT(o.OrderID) AS OrderCount\nFROM customers c\nJOIN orders o ON c.CustomerID = o.CustomerID\nGROUP BY c.CustomerID\nORDER BY OrderCount ASC\nLIMIT 1;"
+  }
+}

@@ -1,0 +1,20 @@
+[project]
+name = "northwind-sql-copilot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=1.4.0",
+    "cryptography>=46.0.3",
+    "dotenv>=0.9.9",
+    "langchain>=1.2.0",
+    "langchain-community>=0.4.1",
+    "langchain-core>=1.2.6",
+    "langchain-ollama>=1.0.1",
+    "pydantic>=2.12.5",
+    "pymysql>=1.1.2",
+    "redis>=7.1.0",
+    "sentence-transformers>=5.2.0",
+    "sqlalchemy>=2.0.45",
+]
