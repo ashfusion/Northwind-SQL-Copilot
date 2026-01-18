@@ -16,7 +16,7 @@ The application enables users to ask natural language questions about the datase
 
 **Natural Language → SQL Query → Database Execution → LLM Response**
 
-![Text-to-SQL Architecture](src/img/architecture.png)
+![Text-to-SQL Architecture](src/architecture.png)
 
 ### 🛠 Tech Stack
 
