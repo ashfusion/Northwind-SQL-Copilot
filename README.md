@@ -1,6 +1,6 @@
-# 🧠 Production-Grade Text-to-SQL Pipeline
+# Text-to-SQL Pipeline
 
-A **production-ready Text-to-SQL engine** built using **LangChain** and **Ollama**, designed for real-world usage rather than demo or notebook-only workflows.
+A **Text-to-SQL engine** built using **LangChain** and **Ollama**.
 
 The system uses a **dual-model architecture**:
 
@@ -19,7 +19,7 @@ The system uses a **dual-model architecture**:
 - **Natural Language Response Model**: `smollm2`
 - Fully configurable via environment variables
 
-### 📜 Production-Grade Logging
+### 📜 Logging
 
 - Structured **JSON logging**
 - Logs stored by date: `logs/YYYY-MM-DD.log`
@@ -45,13 +45,6 @@ The system uses a **dual-model architecture**:
 - Cleans malformed SQL before execution
 - Sanitizes database output before passing to the NLP model
 - Reduces hallucinations from lightweight models
-
-### 💲 Currency Enforcement
-
-- Automatic monetary formatting:
-
-  - USD only
-  - No decimal values
 
 ---
 
@@ -87,8 +80,8 @@ Create a `.env` file in the project root:
 ```env
 DB_HOST=localhost
 DB_PORT=3306
-DB_USER=root
-DB_PASS=pass
+DB_USER=user
+DB_PASS=password
 DB_SCHEMA=text_to_sql
 
 SQL_MODEL=qwen3-coder:30b
@@ -131,14 +124,3 @@ Each run records:
 - Execution time for every pipeline step
 
 ---
-
-## 🧠 Notes
-
-This project is built with production constraints in mind:
-
-- Clear separation of model responsibilities
-- Prompt discipline
-- Defensive sanitization
-- Strong observability
-
-This is **software**, not a demo notebook.
