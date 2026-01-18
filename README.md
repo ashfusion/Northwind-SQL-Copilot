@@ -1,6 +1,29 @@
-# Text-to-SQL Pipeline
+# Northwind-SQL-Copilot
 
-A **Text-to-SQL engine** built using **LangChain** and **Ollama**.
+## 🚀 Text-to-SQL Engine using LangChain & Ollama
+
+This project implements a **Text-to-SQL pipeline** powered by **LangChain** and **Ollama**, built on top of the classic **Northwind database**.
+
+The application enables users to ask natural language questions about the dataset. It automatically performs the following steps:
+
+1. Uses a Large Language Model to translate the question into a SQL query  
+2. Executes the generated SQL against the Northwind database  
+3. Fetches the query results  
+4. Sends the results to a smaller LLM  
+5. Converts them into a clear, human-readable response  
+
+### 🔁 Workflow
+
+**Natural Language → SQL Query → Database Execution → LLM Response**
+
+![Text-to-SQL Architecture](src/img/architecture.png)
+
+### 🛠 Tech Stack
+
+- LangChain  
+- Ollama (Local LLMs)  
+- Northwind Database  
+- Python  
 
 The system uses a **dual-model architecture**:
 
